@@ -2,6 +2,7 @@ import axios from 'axios';
 import qs from 'qs';
 axios.defaults.timeout=5000
 // axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+let base = 'http://localhost:8083';
 
 axios.interceptors.request.use(
   config=>{
@@ -23,7 +24,7 @@ axios.interceptors.request.use(
 )
 
 
-let base = 'http://localhost:8083';
+
 
 export const requestLogin = params => { return axios.post(`${base}/user/signin`, params).then(res => res.data); };
 

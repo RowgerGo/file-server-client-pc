@@ -6,7 +6,7 @@ function singleUpload(file) {
   let size = stats.size;//文件大小
   let pieces = Math.ceil(size / chunkSize);//总共的分片数
   console.log("总共的分片数：---------",pieces)
-  for (let i=1;i<pieces;i++){
+  for (let i=0;i<pieces;i++){
     console.log("总共需要上传的次数：---------",i)
     //uploadPiece(i)
   }
